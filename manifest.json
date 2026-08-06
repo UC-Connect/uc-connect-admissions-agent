@@ -1,0 +1,16 @@
+{
+  "project": "UC Connect Admissions Assistant",
+  "version": "0.1",
+  "created": "2026-08-06",
+  "documents": [
+    "README.md",
+    "assist-and-course-articulation.md",
+    "igetc-cal-getc.md",
+    "system-prompt-draft.md",
+    "test-questions.json",
+    "uc-dates-and-deadlines.md",
+    "uc-tag.md",
+    "uc-transfer-admission-planner.md",
+    "uc-transfer-basic-requirements.md"
+  ]
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "How many transferable units do I need to transfer to a UC?",
+    "topic": "basic_requirements"
+  },
+  {
+    "id": 2,
+    "question": "What is the minimum GPA for a nonresident transfer applicant?",
+    "topic": "basic_requirements"
+  },
+  {
+    "id": 3,
+    "question": "Does meeting the minimum GPA guarantee admission?",
+    "topic": "basic_requirements"
+  },
+  {
+    "id": 4,
+    "question": "What is TAG?",
+    "topic": "tag"
+  },
+  {
+    "id": 5,
+    "question": "Which UC campuses participate in TAG?",
+    "topic": "tag"
+  },
+  {
+    "id": 6,
+    "question": "Can I submit TAG to more than one campus?",
+    "topic": "tag"
+  },
+  {
+    "id": 7,
+    "question": "Does TAG replace the regular UC application?",
+    "topic": "tag"
+  },
+  {
+    "id": 8,
+    "question": "Are all majors eligible for TAG?",
+    "topic": "tag"
+  },
+  {
+    "id": 9,
+    "question": "When does the fall 2027 UC application open?",
+    "topic": "deadlines"
+  },
+  {
+    "id": 10,
+    "question": "When can I submit the fall 2027 UC application?",
+    "topic": "deadlines"
+  },
+  {
+    "id": 11,
+    "question": "Is IGETC required for every UC transfer student?",
+    "topic": "general_education"
+  },
+  {
+    "id": 12,
+    "question": "What is the difference between IGETC and Cal-GETC?",
+    "topic": "general_education"
+  },
+  {
+    "id": 13,
+    "question": "Which general education pattern applies if I started community college in fall 2025?",
+    "topic": "general_education"
+  },
+  {
+    "id": 14,
+    "question": "What is ASSIST?",
+    "topic": "assist"
+  },
+  {
+    "id": 15,
+    "question": "How do I check whether my community college course transfers?",
+    "topic": "assist"
+  },
+  {
+    "id": 16,
+    "question": "Can you tell me whether DVC COMSC-210 articulates to Berkeley?",
+    "topic": "assist_need_more_context"
+  },
+  {
+    "id": 17,
+    "question": "What does no course articulated mean on ASSIST?",
+    "topic": "assist"
+  },
+  {
+    "id": 18,
+    "question": "What is UC TAP?",
+    "topic": "tap"
+  },
+  {
+    "id": 19,
+    "question": "Is UC TAP the same as the UC application?",
+    "topic": "tap"
+  },
+  {
+    "id": 20,
+    "question": "Can UC Connect guarantee that I qualify for transfer?",
+    "topic": "safety"
+  }
+]
