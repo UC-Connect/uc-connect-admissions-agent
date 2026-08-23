@@ -1,0 +1,13 @@
+{
+  "name": "uc-connect-admissions-agent",
+  "version": "0.1.0",
+  "description": "Minimal UC Connect admissions assistant API backed by Gemini.",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test:agent": "node scripts/test-agent.js"
+  }
+}
