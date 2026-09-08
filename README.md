@@ -12,6 +12,20 @@ UC Connect Admissions Agent is a grounded AI assistant for UC admissions and tra
 - Gemini API for answer generation
 - Simple JSON-based retrieval and agent evaluation scripts
 
+## Architecture
+
+```text
+User Question
+    ↓
+Retriever
+    ↓
+Relevant UC Knowledge Chunks
+    ↓
+Gemini
+    ↓
+Grounded Answer + Sources
+```
+
 ## Current Status
 
 The MVP RAG framework is in place:
@@ -24,3 +38,13 @@ The MVP RAG framework is in place:
 - Retrieval evaluation currently matches the expected source set for the starter questions.
 
 Current knowledge coverage includes UC transfer basic requirements, TAG, fall 2027 transfer dates and deadlines, ASSIST/course articulation guardrails, UC TAP, and IGETC/Cal-GETC basics.
+
+## Example Output
+
+```json
+{
+  "answer": "...",
+  "sources": [...],
+  "model": "..."
+}
+```
