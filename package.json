@@ -8,6 +8,9 @@
     "node": ">=18"
   },
   "scripts": {
+    "eval:agent": "node scripts/eval-agent.js",
+    "eval:retrieval": "node scripts/eval-retrieval.js",
+    "retrieve": "node scripts/retrieve.js",
     "test:agent": "node scripts/test-agent.js"
   }
 }

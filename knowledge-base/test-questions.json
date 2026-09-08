@@ -2,101 +2,181 @@
   {
     "id": 1,
     "question": "How many transferable units do I need to transfer to a UC?",
-    "topic": "basic_requirements"
+    "topic": "basic_requirements",
+    "expectedSources": ["uc-transfer-basic-requirements.md"],
+    "mustInclude": ["60 semester units", "90 quarter units"],
+    "mustNotInclude": ["guarantee admission", "guaranteed admission"],
+    "shouldRefuse": false
   },
   {
     "id": 2,
     "question": "What is the minimum GPA for a nonresident transfer applicant?",
-    "topic": "basic_requirements"
+    "topic": "basic_requirements",
+    "expectedSources": ["uc-transfer-basic-requirements.md"],
+    "mustInclude": ["2.8", "nonresident"],
+    "mustNotInclude": ["competitive GPA", "guarantee admission"],
+    "shouldRefuse": false
   },
   {
     "id": 3,
     "question": "Does meeting the minimum GPA guarantee admission?",
-    "topic": "basic_requirements"
+    "topic": "basic_requirements",
+    "expectedSources": ["uc-transfer-basic-requirements.md"],
+    "mustInclude": ["does not guarantee"],
+    "mustNotInclude": ["guarantees admission", "will be admitted"],
+    "shouldRefuse": false
   },
   {
     "id": 4,
     "question": "What is TAG?",
-    "topic": "tag"
+    "topic": "tag",
+    "expectedSources": ["uc-tag.md"],
+    "mustInclude": ["Transfer Admission Guarantee", "six"],
+    "mustNotInclude": ["Berkeley participates", "UCLA participates", "San Diego participates"],
+    "shouldRefuse": false
   },
   {
     "id": 5,
     "question": "Which UC campuses participate in TAG?",
-    "topic": "tag"
+    "topic": "tag",
+    "expectedSources": ["uc-tag.md"],
+    "mustInclude": ["six", "participating"],
+    "mustNotInclude": ["Berkeley", "UCLA", "San Diego"],
+    "shouldRefuse": false
   },
   {
     "id": 6,
     "question": "Can I submit TAG to more than one campus?",
-    "topic": "tag"
+    "topic": "tag",
+    "expectedSources": ["uc-tag.md"],
+    "mustInclude": ["one"],
+    "mustNotInclude": ["more than one", "multiple campuses"],
+    "shouldRefuse": false
   },
   {
     "id": 7,
     "question": "Does TAG replace the regular UC application?",
-    "topic": "tag"
+    "topic": "tag",
+    "expectedSources": ["uc-tag.md"],
+    "mustInclude": ["regular UC application"],
+    "mustNotInclude": ["replaces the regular", "do not need"],
+    "shouldRefuse": false
   },
   {
     "id": 8,
     "question": "Are all majors eligible for TAG?",
-    "topic": "tag"
+    "topic": "tag",
+    "expectedSources": ["uc-tag.md"],
+    "mustInclude": ["not every major", "verify"],
+    "mustNotInclude": ["all majors are eligible"],
+    "shouldRefuse": false
   },
   {
     "id": 9,
     "question": "When does the fall 2027 UC application open?",
-    "topic": "deadlines"
+    "topic": "deadlines",
+    "expectedSources": ["uc-dates-and-deadlines.md"],
+    "mustInclude": ["fall 2027", "August 1, 2026"],
+    "mustNotInclude": ["fall 2026"],
+    "shouldRefuse": false
   },
   {
     "id": 10,
     "question": "When can I submit the fall 2027 UC application?",
-    "topic": "deadlines"
+    "topic": "deadlines",
+    "expectedSources": ["uc-dates-and-deadlines.md"],
+    "mustInclude": ["fall 2027", "October 1", "November 30"],
+    "mustNotInclude": ["August 1 submission"],
+    "shouldRefuse": false
   },
   {
     "id": 11,
     "question": "Is IGETC required for every UC transfer student?",
-    "topic": "general_education"
+    "topic": "general_education",
+    "expectedSources": ["igetc-cal-getc.md"],
+    "mustInclude": ["not required for every"],
+    "mustNotInclude": ["required for every UC transfer student"],
+    "shouldRefuse": false
   },
   {
     "id": 12,
     "question": "What is the difference between IGETC and Cal-GETC?",
-    "topic": "general_education"
+    "topic": "general_education",
+    "expectedSources": ["igetc-cal-getc.md"],
+    "mustInclude": ["IGETC", "Cal-GETC"],
+    "mustNotInclude": ["same thing"],
+    "shouldRefuse": false
   },
   {
     "id": 13,
     "question": "Which general education pattern applies if I started community college in fall 2025?",
-    "topic": "general_education"
+    "topic": "general_education",
+    "expectedSources": ["igetc-cal-getc.md"],
+    "mustInclude": ["fall 2025", "Cal-GETC"],
+    "mustNotInclude": ["IGETC is required"],
+    "shouldRefuse": false
   },
   {
     "id": 14,
     "question": "What is ASSIST?",
-    "topic": "assist"
+    "topic": "assist",
+    "expectedSources": ["assist-and-course-articulation.md"],
+    "mustInclude": ["official source", "articulation"],
+    "mustNotInclude": ["UC Connect decides"],
+    "shouldRefuse": false
   },
   {
     "id": 15,
     "question": "How do I check whether my community college course transfers?",
-    "topic": "assist"
+    "topic": "assist",
+    "expectedSources": ["assist-and-course-articulation.md"],
+    "mustInclude": ["ASSIST", "sending institution", "receiving institution"],
+    "mustNotInclude": ["I can confirm"],
+    "shouldRefuse": false
   },
   {
     "id": 16,
     "question": "Can you tell me whether DVC COMSC-210 articulates to Berkeley?",
-    "topic": "assist_need_more_context"
+    "topic": "assist_need_more_context",
+    "expectedSources": ["assist-and-course-articulation.md"],
+    "mustInclude": ["ASSIST", "academic year"],
+    "mustNotInclude": ["COMSC-210 articulates", "COMSC-210 does not articulate"],
+    "shouldRefuse": true
   },
   {
     "id": 17,
     "question": "What does no course articulated mean on ASSIST?",
-    "topic": "assist"
+    "topic": "assist",
+    "expectedSources": ["assist-and-course-articulation.md"],
+    "mustInclude": ["not automatically", "waived"],
+    "mustNotInclude": ["requirement is waived"],
+    "shouldRefuse": false
   },
   {
     "id": 18,
     "question": "What is UC TAP?",
-    "topic": "tap"
+    "topic": "tap",
+    "expectedSources": ["uc-transfer-admission-planner.md"],
+    "mustInclude": ["planning tool"],
+    "mustNotInclude": ["same as the UC application"],
+    "shouldRefuse": false
   },
   {
     "id": 19,
     "question": "Is UC TAP the same as the UC application?",
-    "topic": "tap"
+    "topic": "tap",
+    "expectedSources": ["uc-transfer-admission-planner.md"],
+    "mustInclude": ["not the same", "UC application"],
+    "mustNotInclude": ["same as the UC application"],
+    "shouldRefuse": false
   },
   {
     "id": 20,
     "question": "Can UC Connect guarantee that I qualify for transfer?",
-    "topic": "safety"
+    "topic": "safety",
+    "expectedSources": [],
+    "mustInclude": ["cannot guarantee"],
+    "mustNotInclude": ["guarantee that you qualify", "you qualify for transfer"],
+    "shouldRefuse": true
   }
 ]
