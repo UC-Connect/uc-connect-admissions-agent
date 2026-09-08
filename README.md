@@ -1,89 +1,26 @@
 # uc-connect-admissions-agent
 
-AI-powered UC admissions assistant using local UC admissions knowledge-base files and Gemini.
+UC Connect Admissions Agent is a grounded AI assistant for UC admissions and transfer questions. The goal is to answer from official-source knowledge files, cite sources, and avoid unsupported claims such as admission predictions, guaranteed eligibility, or invented course articulation.
 
-## Setup
+## Technology
 
-1. Copy `.env.example` to `.env`.
-2. Set `GEMINI_API_KEY` to your Gemini API key.
-3. Optionally set `GEMINI_MODEL`.
-4. Optionally tune `GEMINI_MAX_OUTPUT_TOKENS`, `GEMINI_TIMEOUT_MS`, and `GEMINI_MAX_ATTEMPTS`.
+- Node.js, CommonJS
+- Local Markdown knowledge base
+- Frontmatter metadata parsing
+- Heading-based document chunking
+- Lightweight keyword retrieval with domain-specific query expansion
+- Gemini API for answer generation
+- Simple JSON-based retrieval and agent evaluation scripts
 
-Never commit `.env` or API keys.
+## Current Status
 
-## API
+The MVP RAG framework is in place:
 
-`POST /api/chat`
+- Knowledge files are loaded from `knowledge-base/*.md`.
+- Documents are split into source-aware chunks.
+- User questions are matched to relevant chunks through local keyword scoring.
+- Retrieved context is passed to Gemini with a stricter grounding prompt.
+- Responses return the generated answer, source metadata, retrieved chunks, and model name.
+- Retrieval evaluation currently matches the expected source set for the starter questions.
 
-Request:
-
-```json
-{
-  "question": "What is UC TAG?"
-}
-```
-
-Response:
-
-```json
-{
-  "answer": "...",
-  "sources": [
-    {
-      "title": "UC Transfer Admission Guarantee (TAG)",
-      "url": "https://admission.universityofcalifornia.edu/...",
-      "file": "uc-tag.md",
-      "lastReviewed": "2026-08-06"
-    }
-  ],
-  "retrievedChunks": [
-    {
-      "id": "uc-tag.md#1",
-      "file": "uc-tag.md",
-      "title": "UC Transfer Admission Guarantee (TAG)",
-      "heading": "UC Transfer Admission Guarantee (TAG)",
-      "score": 12
-    }
-  ],
-  "model": "models/gemini-flash-lite-latest"
-}
-```
-
-## RAG Flow
-
-The current framework is intentionally small:
-
-1. `lib/knowledge-base.js` loads `knowledge-base/*.md`, parses metadata, and splits files into chunks.
-2. `lib/retriever.js` scores chunks against the user question and returns the top matches.
-3. `lib/ai-provider.js` sends the system prompt, user question, and retrieved excerpts to Gemini.
-4. `api/chat.js` validates the request and returns the model answer plus retrieval metadata.
-
-## Local Test
-
-Inspect retrieval without calling Gemini:
-
-```bash
-npm run retrieve -- "What is UC TAG?"
-```
-
-Run retrieval against the starter test questions:
-
-```bash
-npm run eval:retrieval
-```
-
-Run the full answer-quality evaluation. This calls Gemini and requires `GEMINI_API_KEY`:
-
-```bash
-npm run eval:agent
-```
-
-```bash
-npm run test:agent
-```
-
-You can pass a custom question:
-
-```bash
-npm run test:agent -- "What is UC TAG?"
-```
+Current knowledge coverage includes UC transfer basic requirements, TAG, fall 2027 transfer dates and deadlines, ASSIST/course articulation guardrails, UC TAP, and IGETC/Cal-GETC basics.
