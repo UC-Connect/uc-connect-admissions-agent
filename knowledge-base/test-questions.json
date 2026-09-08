@@ -40,8 +40,8 @@
     "question": "Which UC campuses participate in TAG?",
     "topic": "tag",
     "expectedSources": ["uc-tag.md"],
-    "mustInclude": ["six", "participating"],
-    "mustNotInclude": ["Berkeley", "UCLA", "San Diego"],
+    "mustInclude": ["Davis", "Irvine", "Merced", "Riverside", "Santa Barbara", "Santa Cruz"],
+    "mustNotInclude": ["Berkeley participates", "UCLA participates", "San Diego participates"],
     "shouldRefuse": false
   },
   {

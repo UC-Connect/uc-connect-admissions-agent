@@ -7,6 +7,7 @@ AI-powered UC admissions assistant using local UC admissions knowledge-base file
 1. Copy `.env.example` to `.env`.
 2. Set `GEMINI_API_KEY` to your Gemini API key.
 3. Optionally set `GEMINI_MODEL`.
+4. Optionally tune `GEMINI_MAX_OUTPUT_TOKENS`, `GEMINI_TIMEOUT_MS`, and `GEMINI_MAX_ATTEMPTS`.
 
 Never commit `.env` or API keys.
 
@@ -44,7 +45,7 @@ Response:
       "score": 12
     }
   ],
-  "model": "gemini-2.0-flash"
+  "model": "models/gemini-flash-lite-latest"
 }
 ```
 
