@@ -1,6 +1,7 @@
 ---
 title: UC Transfer Basic Requirements
 source_url: https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/preparing-to-transfer/basic-requirements.html
+audience: transfer
 source_type: Official UC Admissions
 applicable_cycle: Verify for the applicant's intended term
 last_reviewed: 2026-09-07
@@ -30,6 +31,7 @@ Campus, college, and major preparation requirements may be additional. UC recomm
 ## Answer guardrails
 
 - Never describe the minimum GPA as a competitive GPA.
+- Meeting the minimum transfer GPA or course requirements does not guarantee admission; only TAG offers a guarantee, at participating campuses, if all conditions are met.
 - Always distinguish minimum UC eligibility from campus or major selection requirements.
 - Do not imply the 7-course pattern alone is enough for admission.
 - Do not confirm that a specific course transfers without checking ASSIST or an official campus evaluation.

@@ -1,6 +1,7 @@
 ---
 title: UC Transfer Admission Planner (UC TAP)
 source_url: https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/transfer-planning-tools/uc-transfer-admission-planner.html
+audience: transfer
 source_type: Official UC Admissions
 applicable_cycle: Current
 last_reviewed: 2026-08-06

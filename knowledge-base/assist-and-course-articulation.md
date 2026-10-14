@@ -2,6 +2,7 @@
 title: ASSIST and Course Articulation
 source_url: https://assist.org/
 supporting_source_url: https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/preparing-to-transfer/
+audience: transfer
 source_type: Official California articulation system and UC Admissions
 applicable_cycle: Check the correct academic year agreement
 last_reviewed: 2026-08-06

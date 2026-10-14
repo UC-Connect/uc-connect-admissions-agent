@@ -1,6 +1,7 @@
 ---
 title: UC Transfer Dates and Deadlines
 source_url: https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-transfer/dates-and-deadlines.html
+audience: transfer
 source_type: Official UC Admissions
 applicable_cycle: 2026-2027 dates for fall 2027 transfer applicants; dynamic, verify every cycle
 last_reviewed: 2026-09-07

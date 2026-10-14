@@ -1,6 +1,7 @@
 ---
 title: IGETC and Cal-GETC
 source_url: https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/preparing-to-transfer/general-education-igetc/
+audience: transfer
 source_type: Official UC Admissions
 applicable_cycle: Depends on first enrollment at a California community college
 last_reviewed: 2026-08-06

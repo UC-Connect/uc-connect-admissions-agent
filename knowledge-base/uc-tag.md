@@ -1,6 +1,7 @@
 ---
 title: UC Transfer Admission Guarantee (TAG)
 source_url: https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/uc-transfer-programs/transfer-admission-guarantee-tag.html
+audience: transfer
 source_type: Official UC Admissions
 applicable_cycle: Requirements vary by campus and admission cycle
 last_reviewed: 2026-09-07

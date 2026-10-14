@@ -35,9 +35,14 @@ The MVP RAG framework is in place:
 - User questions are matched to relevant chunks through local keyword scoring.
 - Retrieved context is passed to Gemini with a stricter grounding prompt.
 - Responses return the generated answer, source metadata, retrieved chunks, and model name.
-- Retrieval evaluation currently matches the expected source set for the starter questions.
+- Each knowledge file is tagged with an `audience` (`freshman`, `transfer`, or `all`); the retriever detects the applicant type from the question and boosts matching documents.
+- Retrieval evaluation: on 43 scored questions, the expected sources appear in the top 5 for 42, and the expected source ranks first for 35. The one miss is an ambiguous question that does not say freshman or transfer; it is kept as a baseline for future semantic retrieval.
 
-Current knowledge coverage includes UC transfer basic requirements, TAG, fall 2027 transfer dates and deadlines, ASSIST/course articulation guardrails, UC TAP, and IGETC/Cal-GETC basics.
+Current knowledge coverage:
+
+- First-year: minimum requirements, A-G subject requirements, UC GPA calculation, statewide guarantee and ELC, comprehensive review (13 factors) and test policy, personal insight questions, fall 2027 dates and deadlines, out-of-state and international requirements including English proficiency.
+- Transfer: basic requirements, TAG, UC Transfer Pathways, comprehensive review (9 factors), personal insight questions, fall 2027 dates and deadlines, ASSIST/course articulation guardrails, UC TAP, and IGETC/Cal-GETC.
+- Shared: application fees and fee waivers, the nine undergraduate campuses, Blue and Gold Opportunity Plan and financial aid forms.
 
 ## Example Output
 

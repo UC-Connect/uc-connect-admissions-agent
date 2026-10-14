@@ -3,6 +3,9 @@ const path = require("node:path");
 const { generateAdmissionsAnswer } = require("../lib/ai-provider");
 const { loadDotEnv } = require("../lib/env");
 
+// Free-tier Gemini allows about 15 requests per minute; override with EVAL_DELAY_MS.
+const DEFAULT_DELAY_MS = 4500;
+
 function loadQuestions() {
   const testPath = path.join(process.cwd(), "knowledge-base", "test-questions.json");
   return JSON.parse(fs.readFileSync(testPath, "utf8"));
@@ -66,12 +69,33 @@ async function main() {
   }
 
   const questions = loadQuestions();
+  const delayMs = Number.parseInt(process.env.EVAL_DELAY_MS, 10) || DEFAULT_DELAY_MS;
   const results = [];
 
-  for (const testCase of questions) {
+  for (const [index, testCase] of questions.entries()) {
+    if (index > 0) {
+      await delay(delayMs);
+    }
+
     process.stderr.write(`Evaluating ${testCase.id}: ${testCase.question}\n`);
 
-    const result = await generateAdmissionsAnswer(testCase.question);
+    let result;
+
+    try {
+      result = await generateAdmissionsAnswer(testCase.question);
+    } catch (error) {
+      results.push({
+        id: testCase.id,
+        topic: testCase.topic,
+        question: testCase.question,
+        passed: false,
+        failures: [`request failed: ${error.message}`],
+        sources: [],
+        answer: "",
+      });
+      continue;
+    }
+
     const failures = checkResult(testCase, result);
 
     results.push({
@@ -93,6 +117,10 @@ async function main() {
   if (failed > 0) {
     process.exitCode = 1;
   }
+}
+
+function delay(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
 main().catch((error) => {
